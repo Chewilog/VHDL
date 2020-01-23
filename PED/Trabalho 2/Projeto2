@@ -1,0 +1,11 @@
+entity 7seg is 
+	port(a,b,c,d 		                        :IN 	     bit;
+			da,db,dc,dd,de,df,dg			:OUT     bit);
+			
+end entity;
+
+architecture dec7 of 7seg is 
+begin
+	da = (not a) and(((not b)and(not c)and d)or(b and(not c)and (not d))) or ((a and(b and (not c)and d))or((not b)and c and d))	
+
+end architecture;	

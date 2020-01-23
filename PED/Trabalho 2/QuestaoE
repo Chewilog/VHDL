@@ -1,0 +1,11 @@
+entity seg is 
+		port(entry1			: in bit_vector (2 downto 0);--entrada 1
+				entry2			: in bit_vector(2 downto 0);--entrada 2
+				cat 			:out bit_vector(6 downto 0)--vetor dos catodos do display
+				
+					);
+end entity;					
+architecture segmentos of seg is
+begin
+cat <= entry1 + entry2;
+end architecture;			   
